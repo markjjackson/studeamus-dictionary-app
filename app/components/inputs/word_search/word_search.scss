@@ -1,0 +1,14 @@
+@import "~Styles/colors";
+
+.searchInput {
+  display: block;
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid $color-grey;
+  width: 100%;
+  font-size: 20px;
+  &:focus {
+    outline: none;
+    border-color: $color-green;
+  }
+}

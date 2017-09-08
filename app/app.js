@@ -12,6 +12,7 @@ import styles from 'Styles/global.scss'
 
 // Components
 import Wrapper from 'Components/containers/app_wrapper/app_wrapper'
+import WordSearch from 'Components/inputs/word_search/word_search'
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends Component {
       <div>
         <Wrapper>
           Studeamus dictionary app.
+          <WordSearch/>
         </Wrapper>
       </div>
     )
