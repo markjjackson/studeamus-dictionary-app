@@ -13,6 +13,9 @@ import styles from 'Styles/global.scss'
 // Components
 import Wrapper from 'Components/containers/app_wrapper/app_wrapper'
 import WordSearch from 'Components/inputs/word_search/word_search'
+import Result from 'Components/result/result'
+
+const mapResults = words => words.map((word, i) => <Result word={word} key={i}/>)
 
 class App extends Component {
   constructor(props) {
@@ -20,11 +23,13 @@ class App extends Component {
   }
 
   render() {
+    const { dictionary } = this.props
     return (
       <div>
         <Wrapper>
           Studeamus dictionary app.
           <WordSearch/>
+          { mapResults(dictionary) }
         </Wrapper>
       </div>
     )

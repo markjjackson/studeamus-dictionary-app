@@ -4,17 +4,20 @@ import connect from 'Redux/connect'
 
 const search = action => e => {
   e.preventDefault()
-  console.log(e.target.value)
-  fetch(`http://localhost:3000/word?q=${e.target.value}`)
-    .then((res) => {
-      if (res.status !== 200) {
-        console.log('Looks like there was a problem. Status Code: ' + res.status)
-        return
-      }
-      res.json().then(function(data) {
-        action(data)
+  if (e.target.value !== '') {
+    fetch(`http://localhost:3000/word?q=${e.target.value}`)
+      .then((res) => {
+        if (res.status !== 200) {
+          console.log('Looks like there was a problem. Status Code: ' + res.status)
+          return
+        }
+        res.json().then(function(data) {
+          action(data)
+        })
       })
-    })
+  } else {
+    action([])
+  }
 }
 
 class WordSearch extends Component {

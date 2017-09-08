@@ -52,7 +52,9 @@ module.exports = {
       // Redux
       Redux: path.join(__dirname, 'app', 'redux'),
       Actions: path.join(__dirname, 'app', 'redux', 'actions'),
-      Reducers: path.join(__dirname, 'app', 'redux', 'reducers')
+      Reducers: path.join(__dirname, 'app', 'redux', 'reducers'),
+      // Util
+      Util: path.join(__dirname, 'app', 'util'),
     }
   }
 }
