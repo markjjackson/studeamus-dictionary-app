@@ -11,6 +11,7 @@ import connect from 'Redux/connect'
 import styles from 'Styles/global.scss'
 
 // Components
+import Wrapper from 'Components/containers/app_wrapper/app_wrapper'
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +21,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        Studeamus dictionary app.
+        <Wrapper>
+          Studeamus dictionary app.
+        </Wrapper>
       </div>
     )
   }
