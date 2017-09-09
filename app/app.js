@@ -12,7 +12,9 @@ import styles from 'Styles/global.scss'
 
 // Components
 import Wrapper from 'Components/containers/app_wrapper/app_wrapper'
+import SearchContainer from 'Components/containers/search_container/search_container'
 import WordSearch from 'Components/inputs/word_search/word_search'
+import ResultsContainer from 'Components/containers/results_container/results_container'
 import Result from 'Components/result/result'
 
 const mapResults = words => words.map((word, i) => <Result word={word} key={i}/>)
@@ -27,9 +29,12 @@ class App extends Component {
     return (
       <div>
         <Wrapper>
-          Studeamus dictionary app.
-          <WordSearch/>
-          { mapResults(dictionary) }
+          <SearchContainer>
+            <WordSearch/>
+          </SearchContainer>
+          <ResultsContainer>
+            { mapResults(dictionary) }
+          </ResultsContainer>
         </Wrapper>
       </div>
     )

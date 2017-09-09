@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
-import styles from './app_wrapper.scss'
+import styles from './results_container.scss'
 
-class AppWrapper extends Component {
+class ResultsContainer extends Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     return (
-      <div className={styles.appContainer}>
+      <div className={styles.resultsContainer}>
         { this.props.children }
       </div>
     )
   }
 }
 
-export default AppWrapper
+export default ResultsContainer
